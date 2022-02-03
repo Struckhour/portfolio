@@ -1,0 +1,176 @@
+/* whole page stuff */
+
+* {
+    /*border: red solid 1px;   */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    background-color: #306d306e;
+    background-image:
+radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
+radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+    height: 100%;
+
+}
+
+body {
+    display: grid;
+    min-height: 100%;
+    width: auto;
+    grid-template-rows: auto 80% auto;
+    grid-template-columns: 150px auto;
+    align-content: start;
+}
+
+/*Logo */
+
+.logo {
+    display: none;
+    background-image: url('../flock.jpg');
+    background-size: cover;
+    border-bottom: whitesmoke 2px solid;
+    border-right: whitesmoke 2px solid;
+}
+
+/* HEADER */
+
+header {
+    height: 100px;
+    background-image: url('../starsdark.jpg');
+    background-size: cover;
+    text-align: center;
+    /*border-bottom: whitesmoke 2px solid; */
+    filter: invert(100%);
+    grid-column: 1 / 3;
+}
+
+h1 {
+    Font-Family: 'Ruda', Sans-Serif;
+    Font-Size: 48px;
+    font-weight: 100;
+    position: relative;
+    width: auto;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 80px;
+    color: rgb(255, 208, 253);
+    font-size: 4rem;
+    letter-spacing: 10px;
+    word-spacing: 30px;
+    margin: 0px 20px;
+}
+
+h3 {
+    Font-Family: 'Ruda', Sans-Serif;
+    Font-Size: 32px;
+    font-weight: 100;
+    color: white;
+}
+
+/* NAV BAR */
+nav {
+    color: white;
+    background-color: rgb(104, 157, 175);
+    background:
+linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+background-color: #131313;
+background-size: 20px 20px;
+    padding-top: 20px;
+    align-self: start;
+    align-content: start;
+    width: 150px;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto;
+    grid-gap: 30px;
+    text-transform: uppercase;
+    padding-left: 30px;
+    padding-bottom: 40px;
+    margin-top: 20px;
+    border-top: whitesmoke solid 1px;
+    border-right: whitesmoke solid 1px;
+    border-bottom: whitesmoke solid 1px;
+}
+
+
+
+/* GALLERY GRID */
+
+p {
+    Font-Family: 'Roboto Slab', Serif;
+    Font-Size: 16px;
+}
+
+.grid {
+    display: grid;
+    grid-template: repeat(1, 1fr) / repeat(4, 1fr);
+    grid-gap: 5px;
+    padding: 15px 25px;
+    width: 100%;
+    height: 80%;
+    margin: auto;
+}
+
+@media only screen and (max-width: 1500px) {
+    .grid {
+        grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .grid {
+        grid-template: repeat(4, 1fr) / repeat(1, 1fr);
+    }
+}
+
+.gallery_img {
+    width: 100%;
+    height: auto;
+}
+
+/* FOOTER */
+
+footer {
+    grid-column: 1 / 3;
+    height: 100px;
+    background-color: #010414;
+    color: white;
+    display: grid;
+    align-self: grid;
+    grid-template: 1fr / 1fr 1fr;
+    width: 100%;
+    align-items: center;
+    justify-items: center;
+}
+
+@media only screen and (max-width: 800px) {
+    footer {
+        grid-template: 1fr 1fr / 1fr;
+    }
+}
+.contact_info {
+    width: 100%;
+    padding-left: 15px;
+}
+.copyright {
+    width: 100%;
+    text-align: right;
+    padding-right: 15px;
+}
+
+h4 {
+    font-size: 16px;
+    font-family: sans-serif;
+}
