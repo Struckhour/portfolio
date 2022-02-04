@@ -1,7 +1,7 @@
 /* whole page stuff */
 
 * {
-    /* border: red solid 1px; */   
+    /* border: red solid 1px;  */  
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -92,6 +92,8 @@ h2 {
     background-color: rgb(133, 84, 90);
     border-top: white solid 2px;
     border-bottom: white solid 2px;
+    transition: transform 2s;
+    transform-origin: top right;
 }
 
 
@@ -114,11 +116,11 @@ background-size: 20px 20px;
     align-content: start;
     width: 150px;
     display: grid;
+    justify-items: center;
     grid-template-columns: auto;
     grid-template-rows: auto auto auto auto;
     grid-gap: 30px;
     text-transform: uppercase;
-    padding-left: 30px;
     padding-bottom: 40px;
     margin-top: 60px;
     border-top: whitesmoke solid 1px;
@@ -126,6 +128,13 @@ background-size: 20px 20px;
     border-bottom: whitesmoke solid 1px;
 }
 
+.Projects {
+    background-color: rgb(217, 219, 77);
+    border: white solid 1px;
+    color: black;
+
+
+}
 
 
 /* GALLERY GRID */
@@ -138,7 +147,7 @@ p {
 
 .grid {
     display: grid;
-    grid-template: 10% auto / repeat(4, 1fr);
+    grid-template: 1% auto / repeat(4, 1fr);
     grid-gap: 5px;
     padding: 15px 25px;
     width: 100%;
@@ -153,7 +162,7 @@ p {
 
 @media only screen and (max-width: 1500px) {
     .grid {
-        grid-template: 10% auto auto / repeat(2, 1fr);
+        grid-template: 1% auto auto / repeat(2, 1fr);
     }
     .gridTitle {
         grid-column: 1 / 3;
@@ -162,7 +171,7 @@ p {
 
 @media only screen and (max-width: 800px) {
     .grid {
-        grid-template: 5% auto auto auto auto / auto;
+        grid-template: 1% auto auto auto auto / auto;
     
     }
     .gridTitle {
